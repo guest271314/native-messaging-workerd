@@ -91,9 +91,7 @@ Read `config.json` in `~/Downloads/condig` subdirectory
 ```
 var request = await fetch("http://localhost:8081/config/config.json")
 var file = await request.json();
-console.log(file); // var request = await fetch("http://localhost:8081/config/config.json")
-var file = await request.json();
-console.log(file);
+console.log(file); // {abc: 123}
 ```
  
 Get directory listing of `~/Downloads`
