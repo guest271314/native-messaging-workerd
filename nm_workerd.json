@@ -1,0 +1,7 @@
+{
+  "name": "nm_workerd",
+  "description": "Read/write files and directories with fetch() and workerd Native Messaging host",
+  "path": "",
+  "type": "stdio",
+  "allowed_origins": []
+}
