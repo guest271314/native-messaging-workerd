@@ -34,6 +34,7 @@ const siteWorker :Workerd.Worker = (
   compatibilityDate = "2024-09-02",
   # TODO: Implement I/O (standard streams)
   compatibilityFlags = ["nodejs_compat_v2"],
+  # "2023-02-28",
 
   # This worker is modules-based.
   modules = [
@@ -50,3 +51,4 @@ const siteWorker :Workerd.Worker = (
     (name = "config", json = "{\"dir\": \"~/Downloads\"}")
   ],
 );
+

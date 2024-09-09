@@ -19,9 +19,27 @@ Terminate `workerd`, until next `fetch()` request to `http://localhost:8081`.
 
 ### Configuration
 
-Adjust `config.capnp` and parameters passed to `workerd` in `nm_workerd.sh` accordingly.
+Adjust `config.capnp` and parameters passed to `workerd` in `nm_workerd.sh` accordingly for local folder to read and write to.
+
+Launch `chrome` with `--silent-debugger-extension-api` to disable showing infobar on Web pages where `chrome.debugger` is attached.
+
+Set JSON accessible to `ServiceWorker` in `fetch` event in `static.js` in `json` of `bindings` of `config.capnp`. 
+
+Compile `config.capnp` to binary format with `workerd compile --config-only ~/native-messaging-workerd/config.capnp > ~/native-messaging-workerd/config`.
+
 
 ### Installation on Chrome and Chromium
+
+Fetch `workerd`
+
+```
+cd $HOME
+mkdir bin
+wget --show-progress --progress=bar --output-document -H -O workerd.gz 'https://github.com/cloudflare/workerd/releases/download/v1.20240903.0/workerd-linux-64.gz' && gzip -d workerd.gz
+chmod +x workerd
+export "$PWD:$PATH"
+```
+Load GitHub repository as unpacked extension and install Native Messaging host
 
 1. Navigate to `chrome://extensions`.
 2. Toggle `Developer mode`.
