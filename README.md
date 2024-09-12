@@ -86,7 +86,7 @@ var file = await request.text();
 console.log(file); // File written to ~/Downloads/config/config.json
 ```
 
-Read `config.json` in `~/Downloads/condig` subdirectory
+Read `config.json` in `~/Downloads/config` subdirectory
 
 ```
 var request = await fetch("http://localhost:8081/config/config.json")
