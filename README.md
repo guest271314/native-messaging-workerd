@@ -66,12 +66,12 @@ fetch(new Request("http://localhost:8081/script.js", {
 .catch(console.error);
 ```
 
-Read file `script.js` to `~/Downloads`
+Read file `script.js` from `~/Downloads`
 
 ```
 fetch("http://localhost:8081/script.js")
 .then((r) => r.text())
-.then(console.log) // console.log(123)
+.then(console.log) // 123
 .catch(console.error);
 ```
 
@@ -111,7 +111,7 @@ console.log(JSON.stringify(file, null, 2));
     "type": "file"
   }
 ]
-*
+*/
 ```
 
 ### TODO
